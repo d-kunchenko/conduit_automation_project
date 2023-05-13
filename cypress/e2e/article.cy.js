@@ -157,7 +157,6 @@ describe('Deleting Article', () => {
       cy.clearCookies().reload();
       cy.login();
       cy.visit(`/#/articles/${articleSlug}`);
-      // I am sorry for this method but I tried to create data for this but it not works
       cy.get('.container > .article-meta > :nth-child(3) > [data-qa="delete-btn"]').should('not.exist');
    });
 });
